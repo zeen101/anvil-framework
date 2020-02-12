@@ -1,0 +1,84 @@
+.articles-featured {
+	@include padding(xlarge);
+
+	.panel-title {
+		margin-bottom: 2rem;
+
+		@include breakpoint(tall) {
+			margin-bottom: 2.25rem;
+		}
+
+		@include breakpoint(venti) {
+			margin-bottom: 5vw;
+		}
+	}
+
+	.articles-container {
+		@include breakpoint(grande) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 2.5vw;
+		}
+	}
+
+	.article-section {
+		max-width: 45em;
+		margin: 0 auto;
+
+		@include breakpoint(grande) {
+			flex-grow: 0;
+			flex-shrink: 0;
+			flex-basis: 50%;
+			margin: 0;
+		}
+	}
+
+	.article-image {
+		.image-wrapper {
+			display: inline-block;
+			height: 100%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.article-details {
+		align-items: center;
+		padding-top: 1.125rem;
+
+		@include breakpoint(grande) {
+			padding-top: 0;
+			padding-left: 2.5rem;
+		}
+	}
+
+	.article-category {
+		margin-bottom: 1em;
+		font-weight: 700;
+		@include tracking(100);
+		text-align: center;
+		text-transform: uppercase;
+
+		@include breakpoint(grande) {
+			text-align: left;
+		}
+	}
+
+	.article-title {
+		margin-bottom: .125em;
+		font-family: $font_heading;
+		@include font-size(40);
+	}
+
+	.article-author {
+		@include font-size(20);
+	}
+
+	.article-excerpt {
+		margin-top: .375em;
+		@include font-size(20);
+	}
+}

@@ -1,0 +1,35 @@
+/* Font Variables */
+$font_main:    'Roboto Condensed', 'Arial Narrow', sans-serif;
+$font_alt:     'Roboto Condensed', 'Arial Narrow', sans-serif;
+$font_heading: $font_alt;
+
+
+/* Color Variables */
+$black:          #000000;
+$white:          #FFFFFF;
+$off_white:      #EBEBEB;
+$grey:           #707070;
+$primary_color:  #F6931E;
+$disabled_color: #808080;
+
+$body_color:     #333333;
+$accent_color:   #AC913A;
+$dark_bg1:       #1D1D1D;
+$dark_bg2:       #2E2E2E;
+$light_bg1:      #F2F2F2;
+$light_bg2:      #FCFAF5;
+$link:           $primary_color;
+$link_visited:   darken($primary_color, 10%);
+$link_active:    $primary_color;
+
+
+/* Dividers */
+$divider_dark:  .0625rem solid rgba($black, .15);
+$divider_light: .0625rem solid rgba($white, .15);
+
+
+/* Logos */
+$logo_full_width:  317px;
+$logo_full_height: 58px;
+$logo_location:    url(../images/zeen101-logo-bk.png);
+$footer_logo_location:    url(../images/zeen101-logo-wh.png);

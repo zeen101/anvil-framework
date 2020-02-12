@@ -1,0 +1,158 @@
+.search-form {
+	padding: 1em;
+	font-size: .875em;
+
+	@include breakpoint(short) {
+		display: flex;
+	}
+
+	.site-content & {
+		background: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	* + & {
+		margin-top: 1.5em;
+
+		.site-search-wrapper & {
+			margin-top: 0;
+		}
+	}
+
+	.search-field {
+		width: 15em;
+		height: 1.5em;
+		background: $off_white;
+		border: none;
+		border-radius: 0;
+		padding: 1em 1.1em;
+		color: $dark_bg1;
+		font-size: 1em;
+
+		&::-webkit-input-placeholder { /* Chrome,Opera,Safari */
+		  color: $disabled_color;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: $disabled_color;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  color: $disabled_color;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  color: $disabled_color;
+		}
+	}
+
+	.search-submit {
+		@include transition();
+		display: block;
+		margin-top: .5em;
+		border: none;
+		border-radius: 0;
+		color: #fff;
+
+		@include breakpoint(short) {
+			margin: 0;
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 3em;
+			height: 3em;
+			font-size: 1em;
+			line-height: 1em;
+		}
+
+		.fa {
+			display: block;
+		}
+	}
+}
+
+.site-search {
+	display: flex;
+	align-items: center;
+	align-self: stretch;
+	position: relative;
+	margin-left: 2.5%;
+
+	@include breakpoint(grande) {
+		margin-left: 2.5vw;
+	}
+
+	.search-button {
+		border: 0;
+		background: none;
+		padding: 0;
+		color: $white;
+		font-size: 1.5em;
+
+		@include breakpoint(tall) {
+			display: block;
+		}
+
+		.fa {
+			display: inline-block;
+			align-items: center;
+			justify-content: center;
+			width: 1.125em;
+			height: 1.125em;
+		}
+	}
+}
+
+.site-search-wrapper {
+	@include transition();
+	display: inline-block;
+	position: absolute;
+	top: calc(100% + 1.25rem);
+	right: 0;
+	z-index: 99;
+	background: $dark_bg1;
+
+	@include breakpoint(tall) {
+		top: calc(100% + 1.375rem);
+	}
+
+	@include breakpoint(grande) {
+		top: calc(100% + 1.5rem);
+	}
+
+	@include breakpoint(venti) {
+		top: calc(100% + 2rem);
+	}
+
+	.home & {
+		margin-top: .0625rem;
+	}
+
+	&.is-hidden {
+		width: 1px;
+		height: 1px;
+		margin: 0;
+		overflow: hidden;
+		opacity: 0;
+	}
+
+	.adv-search {
+		margin: 0;
+		padding: .5rem 1rem 0;
+		font-size: .75em;
+		text-align: right;
+
+		a {
+			color: $white;
+
+			&:visited {
+				color: $white;
+			}
+
+			&:hover, &:active, &:focus {
+				color: rgba($white, .8);
+			}
+		}
+	}
+}

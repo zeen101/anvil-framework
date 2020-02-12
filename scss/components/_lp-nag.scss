@@ -1,0 +1,93 @@
+.paywall-wrap, .leaky_paywall_message_wrap {
+	position: relative;
+	width: calc(100% + 3rem);
+	margin-top: -6em;
+	margin-left: -1.5rem;
+	background: linear-gradient(to bottom, rgba($white, 0), rgba($white, .5) .5em, $white 5.5em, $white 100%);
+	padding: 9em 0 0;
+
+	#leaky_paywall_message {
+		width: 100%;
+		margin: 0;
+		box-shadow: 0 0 .5rem .25em rgba($black,.125);
+		border: .5rem solid $white;
+		border-radius: .25rem;
+		background: $light_bg2;
+		padding: 2rem 1.5rem;
+		color: inherit;
+		font-size: inherit;
+		font-weight: 500;
+		line-height: inherit;
+		text-align: center;
+
+		a {
+			border-color: transparent;
+		}
+
+		.button {
+			color: $white;
+		}
+
+		.paywall-heading {
+			margin-bottom: .5em;
+			color: $primary_color;
+			@include font-size(36);
+
+			a {
+				color: inherit;
+				font-weight: inherit;
+
+				&:visited {
+					color: inherit;
+				}
+
+				&:hover, &:active, &:focus {
+					color: inherit;
+				}
+			}
+		}
+
+		.subscribe-title {
+			margin-bottom: 0;
+			color: $primary_color;
+			@include font-size(56);
+		}
+
+		.subscribe-details {
+			padding-top: 1.125rem;
+			@include font-size(24);
+
+			@include breakpoint(tall) {
+				padding-top: 1.25rem;
+			}
+
+			@include breakpoint(grande) {
+				padding-top: 2.5vw;
+			}
+		}
+
+		.subscribe-button {
+			padding-top: 1.125rem;
+
+			@include breakpoint(tall) {
+				padding-top: 1.25rem;
+			}
+
+			@include breakpoint(grande) {
+				padding-top: 2.5vw;
+			}
+		}
+
+		.subscribe-level {
+			display: block;
+
+			&:not(:first-child) {
+				margin-top: .375em;
+			}
+		}
+	}
+}
+
+.issuem-leaky-paywall-subscriber-info {
+	margin-top: 40px;
+}

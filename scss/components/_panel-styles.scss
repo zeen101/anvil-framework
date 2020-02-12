@@ -1,0 +1,121 @@
+.articles-panel {
+	.articles-panels & {
+		&:nth-child(even) {
+			background: $light_bg1;
+		}
+	}
+
+	.article-author {
+		margin-top: .375em;
+		font-size: .875em;
+		font-weight: 700;
+		@include tracking(25);
+		text-transform: uppercase;
+	}
+}
+
+.bg-light {
+	background: $light_bg1;
+}
+
+.bg-dark {
+	background: $dark_bg2;
+	color: $white;
+
+	a:not(.button) {
+		color: inherit;
+
+		&:visited {
+			color: inherit;
+		}
+
+		&:hover, &:active, &:focus {
+			color: inherit;
+		}
+	}
+}
+
+.bg-primary {
+	background: $primary_color;
+	color: $white;
+
+	a:not(.button) {
+		color: inherit;
+
+		&:visited {
+			color: inherit;
+		}
+
+		&:hover, &:active, &:focus {
+			color: inherit;
+		}
+	}
+}
+
+.bg-accent {
+	background: $accent_color;
+	color: $white;
+
+	a:not(.button) {
+		color: inherit;
+
+		&:visited {
+			color: inherit;
+		}
+
+		&:hover, &:active, &:focus {
+			color: inherit;
+		}
+	}
+}
+
+.panel-title {
+	font-family: $font_alt;
+	@include font-size(50);
+	font-weight: 700;
+	@include tracking(50);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.articles-wrapper,
+.launchpads-wrapper {
+	width: 100%;
+	max-width: 100%;
+
+	.article,
+	.launchpad {
+		max-width: 20em;
+
+		@include breakpoint(tall) {
+			max-width: auto;
+		}
+	}
+
+	.article-image,
+	.launchpad-image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		border-radius: .25rem;
+	}
+
+	.article-title,
+	.launchpad-title {
+		margin: .75rem 0 0;
+		@include font-size(20);
+		font-weight: 700;
+	}
+
+	.article-excerpt,
+	.launchpad-excerpt {
+		margin-top: .375em;
+		@include font-size(16);
+	}
+}
+
+.panel-cta {
+	margin-top: 2.25em;
+	text-align: center;
+}

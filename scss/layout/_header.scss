@@ -1,0 +1,43 @@
+.site-header {
+	position: relative;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+	@include padding(small);
+	color: $white;
+
+	@include breakpoint(grande) {
+		margin: 0 auto;
+	}
+
+	.shell-full {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.page-template-current-issue & {
+		
+		border-bottom: $divider_light;
+	}
+}
+
+.site-branding {
+	max-width: calc(92.5% - 3.6875em); // (100% - 5%) for right margin - width of search/menu icons
+	margin-right: auto;
+}
+
+.site-logo {
+	display: block;
+	background: $logo_location no-repeat center center / contain;
+	width: $logo_full_width;
+	max-width: 100%;
+	height: $logo_full_height;
+	margin: 0;
+	text-indent: -200vw;
+
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}

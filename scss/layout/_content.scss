@@ -1,0 +1,133 @@
+.site-content {}
+
+.content-area {
+	.entry-content {
+		@extend .clearfix;
+	}
+}
+
+.page-template-default,
+.error404,
+.search {
+	.site-content {
+		@include padding(large);
+	}
+
+	.content-area {
+		@extend .shell-small;
+	}
+}
+
+.page-template-page-past-issues,
+.archive,
+.blog {
+	.site-content {
+		@include padding(large);
+	}
+
+	.content-area {
+		@extend .shell;
+	}
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.byline {
+	display: none;
+
+	.single &,
+	.group-blog & {
+		display: inline;
+	}
+}
+
+.page-content, .entry-content, .entry-summary {}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+img.wp-smiley {
+	.page-content &,
+	.entry-content &,
+	.comment-content & {
+		border: none;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 0;
+	}
+}
+
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+
+	img[class*="wp-image-"] {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.wp-caption-text {
+		margin: 0.8075em 0;
+	}
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	vertical-align: top;
+
+	.gallery-columns-2 & {
+		max-width: 50%;
+	}
+
+	.gallery-columns-3 & {
+		max-width: calc(100% / 3);
+	}
+
+	.gallery-columns-4 & {
+		max-width: 25%;
+	}
+
+	.gallery-columns-5 & {
+		max-width: 20%;
+	}
+
+	.gallery-columns-6 & {
+		max-width: calc(100% / 6);
+	}
+
+	.gallery-columns-7 & {
+		max-width: calc(100% / 7);
+	}
+
+	.gallery-columns-8 & {
+		max-width: 12.5%;
+	}
+
+	.gallery-columns-9 & {
+		max-width: calc(100% / 9);
+	}
+}
+
+.gallery-caption {
+	display: block;
+}

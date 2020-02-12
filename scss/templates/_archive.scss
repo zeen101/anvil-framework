@@ -1,0 +1,20 @@
+.archive,
+.blog {
+	.page-title {
+		@extend .panel-title;
+	}
+}
+
+.navigation.pagination {
+	margin-top: 2.25em;
+
+	.nav-links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.page-numbers {
+		margin: 0 .25em;
+	}
+}

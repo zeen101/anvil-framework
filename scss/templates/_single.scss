@@ -1,0 +1,250 @@
+.single {
+	.content-wrap {
+		@include padding(large);
+
+		& > .shell-full {
+			@include breakpoint(tall) {
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+			}
+
+			@include breakpoint(grande) {
+				padding: 0 2.5vw;
+			}
+		}
+	}
+
+	.content-area {
+		flex-grow: 0;
+		flex-shrink: 1;
+		flex-basis: auto;
+	}
+
+	.entry-meta {
+		margin-top: .25em;
+		@include font-size(20);
+		font-weight: 500;
+
+		.issue-meta {
+			&:not(:last-child) {
+				&:after {
+					content: '\00a0\007c';
+					display: inline-block;
+					margin: 0 .25em;
+					color: lighten($body_color, 50%);
+					font-weight: 400;
+				}
+			}
+		}
+	}
+
+	.share-link {
+		margin-right: .5em;
+	}
+
+	.entry-content,
+	.comments-area {
+		max-width: 47.5rem;
+		margin: 5vw auto 0;
+		padding: 0 1.5rem;
+
+		@include breakpoint(tall) {
+			margin-top: 3.75vw;
+		}
+	}
+
+	.entry-title {
+		margin-bottom: .5em;
+		color: $primary_color;
+		@include font-size(40);
+	}
+
+	.entry-author {
+		clear: both;
+		margin-top: 1.5em;
+		padding-top: 1.5em;
+		border-top: .0625em solid #ccc;
+		color: $grey;
+
+		@include breakpoint(short) {
+			display: flex;
+		}
+	}
+
+	.author-avatar {
+		flex: 0 0 auto;
+		width: 150px;
+		margin-bottom: 1.5em;
+
+		@include breakpoint(short) {
+			margin-right: 1.5em;
+			margin-bottom: 0;
+		}
+	}
+
+	.widget-area {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: auto;
+
+		width: 100%;
+		max-width: 17.5rem;
+		margin: 5vw auto 0;
+
+		@include breakpoint(tall) {
+			width: 17.5rem;
+			margin: 0 0 0 1.25em;
+		}
+
+		@include breakpoint(grande) {
+			width: 18.75rem;
+			margin-left: 2.5vw;
+		}
+
+		.button {
+			width: 100%;
+			max-width: 20rem;
+		}
+
+		.widget {
+			margin-top: 1.575rem;
+
+			@include breakpoint(tall) {
+				margin-top: 2.5rem;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.widget-item {
+			&:not(:first-child) {
+				margin-top: .25rem;
+			}
+		}
+	}
+
+	.issue-toc {
+		background: $light_bg1;
+
+		.issue-date {
+			display: block;
+			width: 100%;
+			background: $dark_bg1;
+			padding: .5em 1em;
+			color: $white;
+			@include font-size(22);
+			text-align: center;
+		}
+
+		.toc-lists {
+			padding: 1.5rem;
+		}
+
+		.toc-title {
+			@include font-size(24);
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+
+		.toc-cat {
+			margin-top: 2rem;
+		}
+
+		.cat-title {
+			color: $primary_color;
+			@include font-size(16);
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+
+		.cat-list {
+			@include font-size(14);
+		}
+
+		.list-item {
+			line-height: 1.2;
+
+			&:not(:first-child) {
+				margin-top: .8em;
+			}
+
+			a {
+				color: inherit;
+
+				&:visited {
+					color: inherit;
+				}
+
+				&:hover, &:active, &:focus {
+					color: inherit;
+				}
+			}
+		}
+	}
+
+	.comments-area {
+		ol {
+			list-style-type: none;
+			margin: 0;
+		}
+
+		.children {
+			margin: 1em 0 0 1em;
+		}
+	}
+
+	.comments-title {
+		margin-bottom: .5em;
+	}
+
+	.comment-list {
+		& + .comment-respond {
+			padding-top: 1em;
+		}
+	}
+
+	.comment {
+		margin-top: 1em;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		.comment-respond {
+			padding: 1em;
+		}
+	}
+
+	.comment-body {
+		padding: 1em;
+		background: $light_bg1;
+		border-radius: .25em;
+	}
+
+	.comment-metadata {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: .25em;
+
+		.edit-link {
+			margin-left: 1em;
+		}
+	}
+
+	.comment-content {
+		margin-top: 1em;
+	}
+
+	.reply {
+		margin-top: 1em;
+	}
+
+	.no-comments {
+		margin-top: 1em;
+		font-style: italic;
+	}
+}

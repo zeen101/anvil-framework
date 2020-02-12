@@ -1,0 +1,16 @@
+.ad-full-width {
+	padding: .625rem 1.125em;
+	text-align: center;
+
+	@include breakpoint(tall) {
+		padding: .625rem 1.25em;
+	}
+
+	@include breakpoint(venti) {
+		padding: .625rem 2.5em;
+	}
+
+	@include breakpoint(trenta) {
+		padding: .625rem 3.125em;
+	}
+}

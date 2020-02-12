@@ -1,0 +1,45 @@
+.leaky-paywall-profile-subscription-details {
+	th {
+		padding: .5rem 1rem;
+		border-left: .125rem solid #fff;
+		border-right: .125rem solid #fff;
+		background: #aaa;
+		color: #fff;
+		font-size: 1.125em;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+
+	td {
+		padding: 1rem;
+		font-weight: 300;
+		text-align: center;
+	}
+
+	tbody {
+		tr {
+			td {
+				border-left: .125rem solid #fff;
+				border-right: .125rem solid #fff;
+				border-bottom: .125rem solid #fff;
+			}
+			&:nth-child(odd) {
+				td {
+					background: #eee;
+				}
+			}
+
+			&:nth-child(even) {
+				td {
+					background: #ddd;
+				}
+			}
+		}
+	}
+}
+
+#leaky-paywall-profile {
+	.leaky-paywall-field-label {
+		display: block;
+	}
+}

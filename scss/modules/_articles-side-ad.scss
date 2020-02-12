@@ -1,0 +1,108 @@
+.articles-side-ad {
+	@include padding(xlarge);
+
+	.panel-title {
+		margin-bottom: 2rem;
+
+		@include breakpoint(tall) {
+			margin-bottom: 2.25rem;
+		}
+
+		@include breakpoint(venti) {
+			margin-bottom: 5vw;
+		}
+	}
+
+	.articles-container {
+		@include breakpoint(tall) {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+
+		@include breakpoint(grande) {
+			padding: 0 2.5vw;
+		}
+	}
+
+	.articles-wrapper {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: auto;
+
+		@include breakpoint(short) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		@include breakpoint(tall) {
+			width: calc(200% / 3);
+		}
+
+		@include breakpoint(grande) {
+			justify-content: flex-start;
+			width: 75%;
+		}
+	}
+
+	.ad-wrapper {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: auto;
+		margin-top: 1.875em;
+		text-align: center;
+
+		@include breakpoint(tall) {
+			width: calc((100% / 3) - 1.5em);
+			margin-top: 0;
+		}
+
+		@include breakpoint(grande) {
+			width: calc(25% - 1.5em);
+		}
+
+		a {
+			display: inline-block;
+		}
+
+		img {
+			@include breakpoint(short) {
+				width: 100%;
+			}
+		}
+	}
+
+	.article {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: auto;
+		margin: 2.25em auto 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		@include breakpoint(short) {
+			max-width: none;
+			margin: 2.25em 0 0;
+			width: calc(50% - (1.5em / 2));
+
+			&:nth-child(-n+2) {
+				margin-top: 0;
+			}
+		}
+
+		@include breakpoint(grande) {
+			width: calc((100% / 3) - ((1.5em * 2) / 3));
+
+			&:nth-child(-n+3) {
+				margin-top: 0;
+			}
+
+			&:not(:nth-of-type(3n+1)) {
+				margin-left: 1.5em;
+			}
+		}
+	}
+}

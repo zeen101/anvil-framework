@@ -1,0 +1,168 @@
+@mixin breakpoint($point) {
+	@if $point == short {
+		@media (min-width: 30em) { @content; }
+	}
+	@else if $point == tall {
+		@media (min-width: 45em) { @content; }
+	}
+	@else if $point == grande {
+		@media (min-width: 60em) { @content; }
+	}
+	@else if $point == venti {
+		@media (min-width: 75em) { @content; }
+	}
+	@else if $point == trenta {
+		@media (min-width: 100em) { @content; }
+	}
+	@else {
+		@media (min-width: $point) { @content; }
+	}
+}
+
+@mixin transition() {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+@mixin tracking($tracking) {
+	letter-spacing: ( $tracking / 1000 ) * 1em;
+}
+
+@mixin padding($size) {
+	@if $size == normal {
+		padding: 1.125rem 1.125rem;
+
+		@include breakpoint(tall) {
+			padding: 1.25rem 1.25rem;
+		}
+		@include breakpoint(grande) {
+			padding: 1.25rem 2.5vw;
+		}
+		@include breakpoint(venti) {
+			padding: 2.5rem 2.5vw;
+		}
+	}
+	@else if $size == xsmall {
+		padding: .625rem 1.125rem;
+
+		@include breakpoint(tall) {
+			padding: .625rem 1.25rem;
+		}
+		@include breakpoint(grande) {
+			padding: .625rem 2.5vw;
+		}
+	}
+	@if $size == small {
+		padding: 1.25rem 1.125rem;
+
+		@include breakpoint(tall) {
+			padding: 1.375rem 1.25rem;
+		}
+		@include breakpoint(grande) {
+			padding: 1.5rem 2.5vw;
+		}
+		@include breakpoint(venti) {
+			padding: 2rem 2.5vw;
+		}
+	}
+	@else if $size == large {
+		padding: 1.575rem 1.125rem;
+
+		@include breakpoint(tall) {
+			padding: 1.75rem 1.25rem;
+		}
+		@include breakpoint(grande) {
+			padding: 1.75rem 2.5vw;
+		}
+		@include breakpoint(venti) {
+			padding: 3.5vw 2.5vw;
+		}
+	}
+	@else if $size == xlarge {
+		padding: 2rem 1.125rem;
+
+		@include breakpoint(tall) {
+			padding: 2.25rem 1.25rem;
+		}
+		@include breakpoint(grande) {
+			padding: 2.25rem 2.5vw;
+		}
+		@include breakpoint(venti) {
+			padding: 5vw 2.5vw;
+		}
+	}
+}
+
+@mixin font-size($size) {
+	@if $size == 16 {
+		font-size: 1rem;
+	}
+	@else if $size == 12 {
+		font-size: .75rem;
+	}
+	@else if $size == 14 {
+		font-size: .875rem;
+	}
+	@else if $size == 18 {
+		font-size: 1rem;
+		@include breakpoint(trenta)  { font-size: 1.125rem; }
+	}
+	@else if $size == 20 {
+		font-size: 1.125rem;
+		@include breakpoint(trenta)  { font-size: 1.25rem; }
+	}
+	@else if $size == 22 {
+		font-size: 1.125rem;
+		@include breakpoint(grande)  { font-size: 1.25rem; }
+		@include breakpoint(trenta)  { font-size: 1.375rem; }
+	}
+	@else if $size == 24 {
+		font-size: 1.125rem;
+		@include breakpoint(tall)   { font-size: 1.25rem; }
+		@include breakpoint(grande) { font-size: 1.375rem; }
+		@include breakpoint(trenta) { font-size: 1.5rem; }
+	}
+	@else if $size == 28 {
+		font-size: 1.25rem;
+		@include breakpoint(tall)   { font-size: 1.375rem; }
+		@include breakpoint(grande) { font-size: 1.5rem; }
+		@include breakpoint(trenta) { font-size: 1.75rem; }
+	}
+	@else if $size == 30 {
+		font-size: 1.25rem;
+		@include breakpoint(tall)   { font-size: 1.375rem; }
+		@include breakpoint(grande) { font-size: 1.5rem; }
+		@include breakpoint(trenta) { font-size: 1.875rem; }
+	}
+	@else if $size == 36 {
+		font-size: 1.375rem;
+		@include breakpoint(tall)   { font-size: 1.5rem; }
+		@include breakpoint(grande) { font-size: 1.625rem; }
+		@include breakpoint(trenta) { font-size: 2.25rem; }
+	}
+	@else if $size == 40 {
+		font-size: 1.375rem;
+		@include breakpoint(tall)   { font-size: 1.5rem; }
+		@include breakpoint(grande) { font-size: 1.75rem; }
+		@include breakpoint(trenta) { font-size: 2.5rem; }
+	}
+	@else if $size == 44 {
+		font-size: 1.5rem;
+		@include breakpoint(tall)   { font-size: 1.75rem; }
+		@include breakpoint(grande) { font-size: 2.5rem; }
+		@include breakpoint(trenta) { font-size: 2.75rem; }
+	}
+	@else if $size == 50 {
+		font-size: 2rem;
+		@include breakpoint(tall)   { font-size: 2.125rem; }
+		@include breakpoint(grande) { font-size: 2.25rem; }
+		@include breakpoint(trenta) { font-size: 3.125rem; }
+	}
+	@else if $size == 56 {
+		font-size: 2rem;
+		@include breakpoint(tall)   { font-size: 2.25rem; }
+		@include breakpoint(grande) { font-size: 2.5rem; }
+		@include breakpoint(trenta) { font-size: 3.5rem; }
+	}
+}

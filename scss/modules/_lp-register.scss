@@ -1,0 +1,127 @@
+.leaky-paywall-subscription-details-wrapper {
+	max-width: 50rem;
+	margin: 0 auto;
+	background: $light_bg1;
+	padding: 1.125rem;
+	font-weight: 500;
+	@include tracking(100);
+
+	@include breakpoint(short) {
+		padding: 2.5rem;
+	}
+
+	@include breakpoint(grande) {
+		padding: 4em;
+	}
+
+	strong {
+		display: block;
+		color: $primary_color;
+		font-size: 1.125em;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		@include breakpoint(short) {
+			display: inline;
+		}
+	}
+}
+
+.leaky-paywall-subscription-details-title {
+	margin-bottom: 1.5rem;
+	@include font-size(28);
+	text-transform: uppercase;
+}
+
+.leaky-paywall-subscription-details {
+	list-style-type: none;
+	margin: 0;
+	border-bottom: .0625em dashed $body_color;
+	padding-bottom: 1.5em;
+
+	li {
+		@include font-size(14);
+		line-height: 1.2;
+
+		&:not(:first-child) {
+			margin-top: 1.3em;
+		}
+	}
+}
+
+.leaky-paywall-subscription-total {
+	margin-top: 2rem;
+	@include font-size(24);
+	@include tracking(100);
+}
+
+.leaky-paywall-payment-form {
+	max-width: 50rem;
+	margin: 3rem auto 0;
+	box-shadow: 0 0 .5rem .25em rgba($black,.125);
+	border: .25rem solid $white;
+	border-radius: .25rem;
+	background: $light_bg2;
+	padding: 1.125rem;
+
+	@include breakpoint(short) {
+		padding: 2.5rem;
+	}
+
+	@include breakpoint(grande) {
+		padding: 4em;
+	}
+
+	h3 {
+		margin-bottom: 1rem;
+		@include font-size(28);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.form-row {
+		label {
+			display: block;
+			margin-bottom: .125em;
+		}
+
+		input {
+			width: 100%;
+		}
+	}
+}
+
+.leaky-paywall-user-fields,
+.leaky-paywall-account-fields {
+	margin-bottom: 2rem;
+}
+
+.leaky-paywall-account-fields {
+	h3 {
+		display: none;
+	}
+}
+
+.leaky-paywall-payment-method-container {
+	margin-bottom: 1rem;
+}
+
+.leaky-paywall-card-details {
+	.form-row {
+		.cvc, .card-zip, .exp-month, .exp-year {
+			width: auto;
+		}
+	}
+}
+
+.leaky-paywall-checkout-button {
+	margin-top: 2rem;
+	text-align: center;
+
+	button {
+		width: 40%;
+		max-width: 25rem;
+		min-width: 12.5rem;
+		color: #fff;
+	}
+}

@@ -1,0 +1,15 @@
+.search {
+	.page-title {
+		@extend .panel-title;
+	}
+
+	article {
+		& + article {
+			margin-top: 2rem;
+		}
+	}
+
+	.entry-title {
+		margin-bottom: .5rem;
+	}
+}

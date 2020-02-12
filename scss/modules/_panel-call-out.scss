@@ -1,0 +1,40 @@
+.call-out {
+	@include padding(xlarge);
+	background: $dark_bg2 no-repeat center center / cover;
+	text-align: center;
+
+	.shell-full {
+		@include padding(xlarge);
+		background: rgba($white, .75);
+	}
+
+	.call-out-wrapper {
+		max-width: 45em;
+		margin: 0 auto;
+	}
+
+	.call-out-title {
+		margin: 0;
+		color: $primary_color;
+		font-family: $font_alt;
+		@include font-size(56);
+		@include tracking(50);
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	.call-out-content {
+		margin-top: 1.5rem;
+		@include font-size(22);
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	.call-out-button {
+		margin-top: 1.5rem;
+	}
+}

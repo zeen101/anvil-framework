@@ -1,0 +1,15 @@
+.issuem_archives_shortcode {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#loginform {
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"] {
+		display: block;
+	}
+}

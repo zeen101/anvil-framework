@@ -1,0 +1,178 @@
+.article-nav {
+	@include padding(normal);
+	background: #EAE3CE;
+
+	.shell-full {
+		@include padding(normal);
+		background: rgba($white, .75);
+	}
+
+	.nav-links {
+		@include breakpoint(short) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		@include breakpoint(tall) {
+			align-items: flex-start;
+		}
+
+		& > [class^="nav-"] {
+			flex-grow: 0;
+			flex-shrink: 0;
+			flex-basis: auto;
+			text-align: center;
+
+			@include breakpoint(short) {
+				width: calc(50% - .75em);
+				margin: 0;
+			}
+
+			&:not(:first-child) {
+				margin-top: 1.125em;
+
+				@include breakpoint(short) {
+					margin-top: 0;
+				}
+			}
+
+			a {
+				display: inline-block;
+				color: $accent_color;
+
+				@include breakpoint(tall) {
+					display: inline-flex;
+					align-items: center;
+				}
+
+				&:visited {
+					color: $accent_color;
+				}
+
+				&:hover, &:active, &:focus {
+					color: $accent_color;
+					text-decoration: none;
+				}
+			}
+		}
+
+		.nav-text {
+			flex-grow: 0;
+			flex-shrink: 0;
+			flex-basis: auto;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			@include font-size(24);
+
+			@include breakpoint(tall) {
+				padding: 0 1em;
+			}
+		}
+
+		.nav-previous {
+			@include breakpoint(short) {
+				margin-right: auto;
+				text-align: right;
+			}
+
+			a {
+				@include breakpoint(tall) {
+					justify-content: flex-end;
+				}
+			}
+
+			.nav-text {
+				&:before {
+					content: '\f104';
+					font-family: fontawesome;
+					margin-right: .5rem;
+					margin-bottom: .125em;
+					font-size: 3em;
+					line-height: 1;
+				}
+			}
+
+			.article-title {
+				margin-left: auto;
+			}
+		}
+
+		.nav-next {
+			@include breakpoint(short) {
+				flex-grow: 0;
+				flex-shrink: 0;
+				flex-basis: auto;
+				margin-left: auto;
+				text-align: left;
+			}
+
+			a {
+				@include breakpoint(tall) {
+					flex-direction: row-reverse;
+					justify-content: flex-end;
+				}
+			}
+
+			.nav-text {
+				&:after {
+					content: '\f105';
+					font-family: fontawesome;
+					margin-left: .5rem;
+					margin-bottom: .125em;
+					font-size: 3em;
+					line-height: 1;
+				}
+			}
+
+			.article-title {
+				margin-right: auto;
+			}
+		}
+
+		.nav-details {
+			display: none;
+			@include font-size(14);
+
+			@include breakpoint(tall) {
+				display: block;
+				flex-grow: 0;
+				flex-shrink: 1;
+				flex-basis: 12rem;
+			}
+
+			@include breakpoint(grande) {
+				flex-basis: 13rem;
+			}
+
+			@include breakpoint(trenta) {
+				flex-basis: 14rem;
+			}
+
+			img {
+				border-radius: .25rem;
+			}
+		}
+
+		.article-title {
+			display: none;
+			@include font-size(14);
+			font-weight: 500;
+
+			@include breakpoint(tall) {
+				display: block;
+				width: 12rem;
+				margin-top: .25rem;
+			}
+
+			@include breakpoint(grande) {
+				width: 13rem;
+			}
+
+			@include breakpoint(trenta) {
+				width: 14rem;
+			}
+		}
+	}
+}

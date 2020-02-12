@@ -1,0 +1,129 @@
+.top-bar {
+	background: $primary_color;
+	color: $white;
+	text-transform: uppercase;
+
+	.ceiling {
+		border-bottom: $divider_dark;
+		padding: 0 1.125em;
+
+		@include breakpoint(tall) {
+			padding: 0 1.25em;
+		}
+
+		@include breakpoint(grande) {
+			padding: 0 2.5vw;
+		}
+
+		.shell-full {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+
+	.ceiling-side {
+		@include transition();
+		display: flex;
+		flex-wrap: wrap;
+		font-size: .75em;
+
+		@include breakpoint(trenta) {
+			font-size: .875em;
+		}
+	}
+
+	.left-side {
+		padding-right: 1.25em;
+
+		.ceiling-section {
+			&:not(:last-child) {
+				margin-right: 1.25em;
+
+				@include breakpoint(tall) {
+					padding-right: 1.25em;
+					border-right: $divider_dark;
+				}
+			}
+		}
+	}
+
+	.right-side {
+		padding-left: 1.25em;
+
+		.ceiling-section {
+			&:not(:first-child) {
+				margin-left: 1.25em;
+
+				@include breakpoint(tall) {
+					padding-left: 1.25em;
+					border-left: $divider_dark;
+				}
+			}
+		}
+	}
+
+	.ceiling-section {
+		display: flex;
+		align-items: center;
+		padding: .625rem 0;
+		line-height: 1;
+
+		&.not-mobile {
+			display: none;
+
+			@include breakpoint(tall) {
+				display: flex;
+			}
+		}
+
+		&.only-mobile {
+			@include breakpoint(tall) {
+				display: none;
+			}
+		}
+	}
+
+	.icon-social {
+		display: flex;
+		align-items: center;
+		font-size: 1.25em;
+
+		&:not(:first-child) {
+			margin-left: 1em;
+		}
+	}
+
+	a {
+		color: $white;
+		text-decoration: none;
+
+		&:visited {
+			color: $white;
+		}
+
+		&:hover, &:active, &:focus {
+			color: rgba($white, .8);
+			text-decoration: none;
+		}
+	}
+
+	.ceiling-icon {
+		display: none;
+		padding-right: .25em;
+
+		@include breakpoint(tall) {
+			display: inline-block;
+		}
+	}
+
+	.ceiling-text {
+		font-family: $font_main;
+		font-weight: 500;
+		@include tracking(50);
+	}
+
+	.ad-full-width {
+		border-bottom: $divider_dark;
+	}
+}

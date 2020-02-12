@@ -1,0 +1,22 @@
+.articles-wide {
+	@include padding(xlarge);
+
+	.panel-title,
+	.shell-full {
+		margin-bottom: 2rem;
+
+		@include breakpoint(tall) {
+			margin-bottom: 2.25rem;
+		}
+
+		@include breakpoint(venti) {
+			margin-bottom: 5vw;
+		}
+	}
+
+	.articles-container {
+		@include breakpoint(grande) {
+			padding: 0 2.5vw;
+		}
+	}
+}

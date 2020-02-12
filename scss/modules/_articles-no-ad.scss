@@ -1,0 +1,26 @@
+.articles-no-ad {
+	@include padding(xlarge);
+
+	.panel-title {
+		margin-bottom: 2rem;
+
+		@include breakpoint(tall) {
+			margin-bottom: 2.25rem;
+		}
+
+		@include breakpoint(venti) {
+			margin-bottom: 5vw;
+		}
+	}
+
+	.articles-container {
+		@include breakpoint(short) {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+		@include breakpoint(grande) {
+			padding: 0 2.5vw;
+		}
+	}
+}

@@ -1,0 +1,6 @@
+.page-template-default,
+.page-template-page-past-issues {
+	.entry-title {
+		@extend .panel-title;
+	}
+}

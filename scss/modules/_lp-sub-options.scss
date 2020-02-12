@@ -1,0 +1,130 @@
+.subscription-options-intro {
+	text-align: center;
+	
+}
+
+.subscription-options {
+	background: $primary_color;
+	@include padding(large);
+
+	.panel-title {
+		margin: 0;
+		color: $white;
+	}
+
+	.subscription-options-title {
+		@extend .panel-title;
+	}
+
+	.leaky_paywall_subscription_options {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		#option-7 {
+			display: none;
+		}
+	}
+
+	.leaky_paywall_subscription_option {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 22.5rem;
+		margin: 2rem 0 0;
+		border: .5rem solid $light_bg1;
+		border-radius: .25rem;
+		background: $white;
+		padding: 2em 1.5em;
+		color: $body_color;
+
+		@include breakpoint(tall) {
+			margin: 2.125rem 1.25rem 0;
+		}
+
+		@include breakpoint(grande) {
+			margin: 2.75rem 2.5vw 0;
+		}
+
+		@include breakpoint(trenta) {
+			margin-top: 3.125rem;
+		}
+
+		& > * {
+			max-width: 100%;
+		}
+	}
+
+	h3 {
+		margin: 0;
+		color: $primary_color;
+		@include font-size(36);
+		font-weight: 500;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.leaky_paywall_subscription_allowed_content {
+		margin: 1.5rem 0 1rem;
+		border-top: .125rem solid rgba($black, .125);
+		border-bottom: .125rem solid rgba($black, .125);
+		padding: 1.5rem 1rem;
+
+		p {
+			display: flex;
+			line-height: 1.2;
+
+			&:before {
+				content: '*';
+				flex-grow: 0;
+				flex-shrink: 0;
+				margin-right: .5em;
+				color: $primary_color;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: .8em;
+			}
+		}
+	}
+
+	.leaky_paywall_subscription_price {
+		margin-bottom: auto;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	.leaky_paywall_subscription_payment_options {
+		margin-top: 3em;
+		text-align: center;
+
+		p:not(:last-child) {
+			margin-bottom: 1em;
+		}
+
+		a:not(.button) {
+			font-weight: 700;
+		}
+	}
+
+	.leaky-paywall-payment-button a {
+		@extend .button;
+	}
+
+	.lp-coupon-div {
+		margin-top: 1rem;
+	}
+
+	.leaky_paywall_subscription_limit_details {
+		margin-top: 1.125rem;
+		color: $white;
+		@include font-size(14);
+		@include tracking(50);
+		text-align: center;
+	}
+}
+
+.subscription-options .issuem-leaky-paywall-subscriber-info { 
+	display: none; 
+}

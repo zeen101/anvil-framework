@@ -1,0 +1,96 @@
+%button {
+	@include transition();
+	background: $primary_color;
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	border: .125em solid;
+	border-color: transparent;
+	border-radius: 0;
+	padding: .8375em 1.1em;
+	/* Improve cursor style usability and consistency between image-type 'input' and others */
+	cursor: pointer;
+	color: $white;
+	font-family: $font_main;
+	/* Correct font size not being inherited in all browsers */
+	font-size: 100%;
+	// font-weight: 500;
+	line-height: 1.2;
+	@include tracking(100);
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	/* Improve appearance and consistency in all browsers */
+	vertical-align: baseline;
+
+	&:hover, &:active, &:focus {
+		background: darken($primary_color, 10%);
+		color: $white;
+		text-decoration: none;
+	}
+}
+
+button {
+	@extend %button;
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+
+	&::-moz-focus-inner {
+		/* Correct oddly displayed inner padding and border in FF3/4 - www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+		border: 0;
+		padding: 0;
+	}
+
+	&.stripe-button-el {
+		@extend button;
+
+		span {
+			position: static !important;
+			height: auto;
+			min-height: auto !important;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			-ms-box-shadow: none;
+			-o-box-shadow: none;
+			box-shadow: none;
+			background: none;
+			padding: 0;
+			color: inherit;
+			font-family: inherit;
+			font-size: inherit;
+			font-weight: inherit;
+			line-height: inherit;
+			text-shadow: none;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			-ms-border-radius: 0;
+			-o-border-radius: 0;
+			border-radius: 0;
+		}
+	}
+}
+
+.button {
+	@extend %button;
+	display: inline-block;
+	min-width: 10.5em;
+
+	&:visited {
+		color: $white;
+	}
+
+	&:hover, &:active, &:focus {
+		background: darken($primary_color, 10%);
+		color: $white;
+	}
+}
+
+.action-button-row {
+	margin-bottom: 0px;
+	text-align: center;
+
+	.button {
+		margin-bottom: 10px;
+
+		&:hover {
+			background: #444;
+		}
+	}
+}

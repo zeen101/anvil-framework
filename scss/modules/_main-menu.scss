@@ -1,0 +1,284 @@
+.main-navigation {
+	@include transition();
+	position: relative;
+	z-index: 100;
+
+	&.toggled {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba($black, .5);
+	}
+
+	&.toggled,
+	& {
+		@include breakpoint(grande) {
+			position: static;
+			width: 100%;
+			height: auto;
+			background: none;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+	}
+
+	li {
+		position: relative;
+	}
+}
+
+.menu-main-menu-container {
+	position: relative;
+
+	.toggled & {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-end;
+		width: 100%;
+		max-width: 22.5em;
+		height: 100%;
+	}
+
+	.toggled &,
+	& {
+		@include breakpoint(grande) {
+			position: static;
+			display: block;
+			max-width: none;
+		}
+	}
+}
+
+.menu-wrapper {
+	@include transition();
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	align-items: center;
+	justify-content: center;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	opacity: 0;
+	background: $dark_bg1;
+
+	@include breakpoint(grande) {
+		flex-grow: 1;
+		flex-shrink: 0;
+		flex-basis: auto;
+		box-shadow: none;
+		top: 0;
+		right: 0;
+		z-index: auto;
+		justify-content: flex-end;
+		background: transparent;
+		margin-left: 2.5vw;
+	}
+
+	.toggled & {
+		position: relative;
+		// position: absolute;
+		// top: 0;
+		// right: 0;
+		z-index: 100;
+		// width: calc(100% - 1.75em);
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		opacity: 1;
+		padding: 1.25em;
+	}
+
+	.toggled &,
+	& {
+		@include breakpoint(grande) {
+			position: relative;
+			overflow: visible;
+			opacity: 1;
+			display: flex;
+			justify-content: flex-end;
+			width: auto;
+			height: auto;
+			padding: 0;
+		}
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@include breakpoint(grande) {
+			display: block;
+		}
+	}
+
+	.menu-item {
+		position: relative;
+
+		@include breakpoint(grande) {
+			display: inline-flex;
+			margin-left: 2.5vw;
+			text-align: center;
+		}
+
+		a {
+			display: block;
+			margin-bottom: .5rem;
+			color: #000;
+			font-family: $font_main;
+			font-size: 1.125em;
+			letter-spacing: .02em;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			@include breakpoint(grande) {
+				margin: 0;
+				padding: 0;
+				font-size: 1em;
+				line-height: 1.2;
+			}
+
+			@include breakpoint(trenta) {
+				font-size: 1.25em;
+			}
+
+			&:hover {
+				@include breakpoint(grande) {
+					color: rgba(#000, .8);
+				}
+			}
+		}
+	}
+
+	.menu-item-has-children {
+		&:hover {
+			.sub-menu {
+				display: block;
+				z-index: 100;
+			}
+		}
+	}
+
+	.sub-menu {
+		margin-left: 1.25em;
+
+		@include breakpoint(grande) {
+			display: none;
+			position: absolute;
+			top: 1.2em;
+			left: 0;
+			margin: 0;
+			padding: 1em;
+			background: #fff;
+			box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+		}
+
+		.menu-item {
+			display: block;
+			margin-left: 0;
+			text-align: left;
+
+			a {
+				font-size: .9375em;
+
+				@include breakpoint(grande) {
+					padding: .5rem 1rem;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+
+	.social-media {
+		display: flex;
+		justify-content: center;
+		margin-top: 1.5em;
+
+		@include breakpoint(tall) {
+			display: none;
+		}
+	}
+
+	.icon-social {
+		display: flex;
+		align-items: center;
+		margin: .5em;
+		color: $white;
+		font-size: 1.5em;
+		text-decoration: none;
+
+		&:visited {
+			color: $white;
+		}
+
+		&:hover, &:active, &:focus {
+			opacity: .9;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+
+.menu-toggle {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	color: #fff;
+	font-size: 1.75em;
+
+	@include breakpoint(grande) {
+		display: none;
+	}
+
+	&:hover, &:focus, &:active {
+		background: none;
+	}
+
+	.toggled & {
+		margin-top: 1.25rem;
+	}
+
+	.fa {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 1em;
+		height: 1em;
+	}
+
+	.toggle-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 1em;
+		height: 1em;
+
+		&:before {
+			content: '\f0c9';
+			font-family: FontAwesome;
+
+			.toggled & {
+				content: '\f00d';
+			}
+		}
+	}
+
+	// &.menu-close {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	z-index: 20;
+	// 	padding: .5em;
+	// }
+}

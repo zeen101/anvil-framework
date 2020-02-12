@@ -1,0 +1,21 @@
+.panel-launchpads {
+	@include padding(xlarge);
+
+	.panel-title {
+		margin-bottom: 2rem;
+
+		@include breakpoint(tall) {
+			margin-bottom: 2.25rem;
+		}
+
+		@include breakpoint(venti) {
+			margin-bottom: 5vw;
+		}
+	}
+
+	.launchpads-container {
+		@include breakpoint(grande) {
+			padding: 0 2.5vw;
+		}
+	}
+}

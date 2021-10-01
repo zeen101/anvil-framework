@@ -1,25 +1,24 @@
 === Anvil Framework ===
 
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-Requires at least: 4.0
-Tested up to: 4.8
+Contributors: endocreative
+Requires at least: 5.0
+Tested up to: 5.8.1
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
 
-A starter theme called Anvil Framework.
+A starter theme called Anvil Framework. Built for use with the Leaky Paywall and IssueM plugins.
 
 == Description ==
 
-A framework theme for Anvil website
+A theme built specifically for use with Leaky Paywall and IssueM. It is intended as a starter theme, meaning you should download it and then tweak the code to meet your specific needs.  It is not meant to be used "out of the box".
 
 == Installation ==
 
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
+
+The theme uses Grunt to compile SCSS. https://gruntjs.com/
 
 == Frequently Asked Questions ==
 
@@ -29,7 +28,7 @@ Anvil Framework includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0 - October 1, 2021 =
 * Initial release
 
 == Credits ==
